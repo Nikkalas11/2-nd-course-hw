@@ -206,7 +206,7 @@ body {
 }
 
 .mini-games {
-  max-height: 3500px;
+  // max-height: 3500px;
   background-color: rgb(32, 32, 39);
   position: relative;
   padding-bottom: 144px;
@@ -238,6 +238,7 @@ body {
   }
   &__text {
     padding: 48px;
+    
   }
   &__name {
     font-size: 48px;

@@ -216,7 +216,6 @@ body {
 }
 
 .mini-games {
-  max-height: 3500px;
   background-color: rgb(32, 32, 39);
   position: relative;
   padding-bottom: 144px;
@@ -411,6 +410,7 @@ body {
   }
   .mini-games__card {
     flex-direction: column-reverse;
+    max-height: 100%;
   }
   .mini-games__text {
     padding: 29px;
