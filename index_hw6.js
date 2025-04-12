@@ -16,7 +16,7 @@ for (let index = 0; index < array.length; index++) {
 // Дан массив: [1, 5, 4, 10, 0, 3].Найдите индекс значения 4 в этом массиве.
 
 for (let index = 0; index < array.length; index++) {
-  if (array[index]  == 4) {
+  if (array[index] == 4) {
     console.log(index);
   }
 }
@@ -24,7 +24,7 @@ for (let index = 0; index < array.length; index++) {
 // Дан массив чисел: [1, 3, 5, 10, 20].С помощью метода join выведите элементы массива через пробел (пустую строку ' ').
 
 const arrayNumber = [1, 3, 5, 10, 20];
-let joinedArrayNumber = arrayNumber.join(' ');
+let joinedArrayNumber = arrayNumber.join(" ");
 console.log(joinedArrayNumber);
 
 // Задание 4
@@ -32,32 +32,53 @@ console.log(joinedArrayNumber);
 
 let arrayMuch = [];
 for (let i = 0; i < 3; i++) {
-    let arrayRow = []
-    for (let j = 0; j < 3; j++) {
-        arrayRow.push(1);  
-    }
-    arrayMuch.push(arrayRow);
+  let arrayRow = [];
+  for (let j = 0; j < 3; j++) {
+    arrayRow.push(1);
+  }
+  arrayMuch.push(arrayRow);
 }
 console.log(arrayMuch);
 
 // Задание 5
 // Дан массив: [1, 1, 1]. Добавьте в конец массива значения 2, 2, 2.
 
-
+let arrayPush = [1, 1, 1];
+for (let i = 0; i < 3; i++) {
+  arrayPush.push(2);
+}
+console.log(arrayPush);
 
 // Задание 6
 // Дан массив: [9, 8, 7, 'a', 6, 5]. С помощью метода sort отсортируйте массив и удалите букву 'a' из массива. Затем выведите массив.
 
+let arraySort = [9, 8, 7, "a", 6, 5];
+arraySort.sort();
+arraySort.pop();
+arraySort.reverse();
+console.log(arraySort);
+
 // Задание 7
 // Дан массив: [9, 8, 7, 6, 5].
 // Попросите пользователя угадать число с помощью метода prompt. Если значение, которое ввел пользователь, есть в массиве, выведите в alert «Угадал», в противном случае — «Не угадал».
+let userArraySort = prompt(`Угадайте число`);
+arraySort.includes(Number(userArraySort))
+  ? alert(`Угадал`)
+  : alert(`Не угадал`);
 
 // Задание 8
 // Дана строка: 'abcdef'. Выведите в консоль 'fedcba'.
 // Для этого задания вам пригодится метод reverse(). Он располагает элементы массива в порядке, обратном исходному.
 
+let str = "abcdef";
+let strArray = str.split('');
+strArray.reverse();
+let rts = strArray.join('');
+console.log(rts);
+
 // Задание 9
 // Дан массив: [[1, 2, 3],[4, 5, 6]]. Выведите в консоль массив вида: [1, 2, 3, 4, 5, 6].
+
 
 // Задание 10
 // Создайте массив с произвольными числами (диапазон от 1 до 10).
