@@ -7,7 +7,7 @@ function guessNumber() {
     attempt++;
     if (isNaN(userNumber)) {
       userNumber = prompt(`Вы ввели не правильное значение. Попробуйте снова`);
-    } else if (!Boolean(userNumber)) {
+    } else if (userNumber == null) {
       alert(`До свидания. Ха - ха - ха`);
       break;
     } else if (userNumber > randomNumber) {
@@ -20,5 +20,56 @@ function guessNumber() {
       );
       break;
     }
+  }
+}
+
+function simpleArithmatic() {
+  let attempt = 0;
+  let trueAttempt = 0;
+  while (true) {
+    const number1 = Math.floor(Math.random() * 10 + 1);
+    const number2 = Math.floor(Math.random() * 10 + 1);
+    const operations = ["+", "-", "/", "*"];
+    const operation = operations[Math.floor(Math.random() * operations.length)];
+    if (operation == "+") {
+      value1 = number1;
+      value2 = number2;
+      num = value1 + value2;
+    } else if (operation == "-") {
+      if (number1 >= number2) {
+        value1 = number1;
+        value2 = number2;
+        num = value1 - value2;
+      } else {
+        value1 = number2;
+        value2 = number1;
+        num = value1 - value2;
+      }
+    } else if (operation == "*") {
+      value1 = number1;
+      value2 = number2;
+      num = value1 * value2;
+    } else if (operation == "/") {
+      value1 = number1 * number2;
+      value2 = number2;
+      num = value1 / value2;
+    }
+    let userNumber = prompt(
+      `Решите арифметическую задачу  ${value1} ${operation} ${value2}`
+    );
+    if (userNumber == null) {
+      alert(
+        `До свидания. Вы правильно решили ${trueAttempt} задач из ${attempt}`
+      );
+      break;
+    } else if (Number(userNumber) !== num) {
+      alert(`Вы ошиблись. Правильный ответ ${num}`);
+    } else {
+      alert(`Вы молодец. Правильный ответ ${num}`);
+      trueAttempt++; 
+    }
+    attempt ++;
+    console.log(num);
+    console.log(userNumber);
   }
 }
