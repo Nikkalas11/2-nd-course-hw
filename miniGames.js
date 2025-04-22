@@ -98,6 +98,21 @@ function simpleQuiz() {
         options: ["1. Четыре", "2. Пять", "3. Шесть"],
         correctAnswer: 2
     }
-];
-  
+  ];
+  let correctUserAnwser = 0;
+
+  for (let i = 0; i < quiz.length; i++) {
+    const question = quiz[i];
+    alert(question.question);
+    alert(question.options);
+
+    let userQuizAnswer = Number(prompt(`Введите номер Вашего ответа`));
+
+    if (userQuizAnswer === question.correctAnswer) {
+      console.log(correctUserAnwser);
+      correctUserAnwser++;
+    }
+  }
+  alert(`Вы дали ${correctUserAnwser} правильных ответов`)
+
 }
