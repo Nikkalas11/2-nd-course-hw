@@ -186,14 +186,15 @@ body {
   padding-bottom: 4px;
 }
 .about-games__number {
-  padding-top: 8px;
-  padding-bottom: 10px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 8px 16px 10px 16px;
   color: rgb(32, 32, 39);
   font-size: 16px;
   font-weight: 500;
   line-height: 110%;
+  border-radius: 52.58px;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  background: rgb(247, 247, 247);
 }
 .about-games__title {
   color: rgb(32, 32, 39);

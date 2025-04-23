@@ -73,3 +73,46 @@ function simpleArithmatic() {
     console.log(userNumber);
   }
 }
+
+function turnTheTextOver(){
+  const turnText = prompt(`Введите текст, который требуется повернуть`);
+  let turnTextOver = [];
+  turnTextOver = turnText.split('').reverse().join('');
+  alert (turnTextOver);
+}
+
+function simpleQuiz() {
+  const quiz = [
+    {
+        question: "Какой цвет небо?",
+        options: ["1. Красный", "2. Синий", "3. Зеленый"],
+        correctAnswer: 2 // номер правильного ответа
+    },
+    {
+        question: "Сколько дней в неделе?",
+        options: ["1. Шесть", "2. Семь", "3. Восемь"],
+        correctAnswer: 2
+    },
+    {
+        question: "Сколько у человека пальцев на одной руке?",
+        options: ["1. Четыре", "2. Пять", "3. Шесть"],
+        correctAnswer: 2
+    }
+  ];
+  let correctUserAnwser = 0;
+
+  for (let i = 0; i < quiz.length; i++) {
+    const question = quiz[i];
+    alert(question.question);
+    alert(question.options);
+
+    let userQuizAnswer = Number(prompt(`Введите номер Вашего ответа`));
+
+    if (userQuizAnswer === question.correctAnswer) {
+      console.log(correctUserAnwser);
+      correctUserAnwser++;
+    }
+  }
+  alert(`Вы дали ${correctUserAnwser} правильных ответов`)
+
+}
