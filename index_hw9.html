@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="hidingText">Задание 1. Скрытие и показ текста</h1>
+    <button class="hidingBtn">Change text</button>
+    <script>
+      const hidingTextEl = document.querySelector(".hidingText");
+      const hidingBtnEl = document.querySelector(".hidingBtn");
+      hidingBtnEl = addEventListener("click", function () {
+        if (hidingTextEl.style.display === "block") {
+          hidingTextEl.style.display = "none";
+          hidingBtnEl.textContent = "Show";
+        } else {
+          hidingTextEl.style.display = "block";
+          hidingBtnEl.textContent = "Hide";
+        }
+      });
+    </script>
+
+
+
+  </body>
+</html>
