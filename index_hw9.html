@@ -7,22 +7,58 @@
   </head>
   <body>
     <h1 class="hidingText">Задание 1. Скрытие и показ текста</h1>
-    <button class="hidingBtn">Change text</button>
+    <button class="hidingBtn">Hide</button>
+    
     <script>
-      const hidingTextEl = document.querySelector(".hidingText");
-      const hidingBtnEl = document.querySelector(".hidingBtn");
-      hidingBtnEl = addEventListener("click", function () {
-        if (hidingTextEl.style.display === "block") {
-          hidingTextEl.style.display = "none";
-          hidingBtnEl.textContent = "Show";
+      const hidingTextEl = document.querySelector('.hidingText');
+      const hidingBtnEl = document.querySelector('.hidingBtn');
+      hidingBtnEl.addEventListener('click', function () {
+        if (hidingTextEl.style.display === 'none') {
+          hidingTextEl.style.display = 'block';
+          hidingBtnEl.textContent = 'Hide';
         } else {
-          hidingTextEl.style.display = "block";
-          hidingBtnEl.textContent = "Hide";
+          hidingTextEl.style.display = 'none';
+          hidingBtnEl.textContent = 'Show';
         }
       });
+     
     </script>
 
-
-
+    
+    <p class="colorText">Задание 2. Изменение стиля элемента
+        Задача: создайте кнопку, которая изменяет цвет текста в элементе 
+    </p>
+    <button class="colorBtn">blue</button>
+    
+    <script>
+      const colorTextEl = document.querySelector('.colorText');
+      const colorBtnEl = document.querySelector('.colorBtn');
+      colorBtnEl.addEventListener('click', function () {
+        if (colorTextEl.style.color === 'blue') {
+          colorTextEl.style.color = 'black';
+          colorBtnEl.textContent = 'blue';
+        } else {
+          colorTextEl.style.color = 'blue';
+          colorBtnEl.textContent = 'black';
+        }
+      });
+     
+    </script>
+    
+    <h1 class="dinamicText">Задание 3. Динамическое изменение текста
+    </h1>
+    <button class="dinamicBtn">Change</button>
+    
+    <script>
+      const dinamicTextEl = document.querySelector('.dinamicText');
+      const dinamicBtnEl = document.querySelector('.dinamicBtn');
+      dinamicBtnEl.addEventListener('click', function () {
+        dinamicTextEl.textContent = 'Привет, мир!'
+      });
+     
+    </script>
+  
+    
+    
   </body>
 </html>
