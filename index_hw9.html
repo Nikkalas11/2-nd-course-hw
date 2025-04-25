@@ -58,7 +58,68 @@
      
     </script>
   
+    <p class="description">Задание 4. Поиск и изменение элементов по классу</p>
+    <p class="description">Задание 4. Поиск и изменение элементов по классу</p>
+    <p class="description">Задание 4. Поиск и изменение элементов по классу</p>
+    <p class="description">Задание 4. Поиск и изменение элементов по классу</p>
+    <button class="changeTexts">Change texts</button>
+
+    <script>
+        const descriptionEl = document.querySelectorAll('.description');
+        const changeTextsEl = document.querySelector('.changeTexts');
+        changeTextsEl.addEventListener('click', function (){
+            descriptionEl.forEach(el => {
+            el.textContent = 'Измененный текст';
+        })
+        })
+        
+    </script>
     
-    
+    <p class="description5">Задание 5. Работа с querySelectorAll</p>
+    <p class="descript">Задание 5. Работа с querySelectorAll</p>
+    <p class="descript">Задание 5. Работа с querySelectorAll</p>
+    <p class="description5">Задание 5. Работа с querySelectorAll</p>
+    <p class="descript">Задание 5. Работа с querySelectorAll</p>
+    <p class="description5">Задание 5. Работа с querySelectorAll</p>
+    <button class="changeText">Change texts description class</button>
+
+    <script>
+        const description5El = document.querySelectorAll('.description5');
+        const changeTextEl = document.querySelector('.changeText');
+        changeTextEl.addEventListener('click', function (){
+            description5El.forEach(el => {
+            el.textContent = 'Новый текст';
+        })
+        })
+        
+    </script>
+    <h3>Задание 6. Добавление нового элемента в DOM
+        Задача: создайте кнопку, которая добавляет новый элемент с текстом в конец документа</h3>
+    <button class="appendBtn">Добавить элемент</button> 
+    <script>
+        const newParagraph = document.createElement('p');
+        newParagraph.textContent = 'Новый абзац';
+        const appendBtnEl = document.querySelector('.appendBtn');
+        appendBtnEl.addEventListener('click', function(){
+            document.body.appendChild(newParagraph);
+        })
+        
+    </script>   
+
+    <h3>Задание 7. Удаление элемента</h3>
+    <p class="description7">создайте кнопку, которая удаляет первый элемент </p>
+    <p class="description7">создайте кнопку, которая удаляет первый элемент </p>
+    <p class="description7">создайте кнопку, которая удаляет первый элемент </p>
+    <p class="description7">создайте кнопку, которая удаляет первый элемент </p>
+    <p class="description7">создайте кнопку, которая удаляет первый элемент </p>
+    <p class="description7">создайте кнопку, которая удаляет первый элемент </p>
+    <button class="removeBtn">Удалить элемент</button>
+    <script>
+        const description7El = document.querySelector('.description7');
+        const removeBtnEl = document.querySelector('.removeBtn');
+        removeBtnEl.addEventListener('click', function(){
+            description7El.remove();
+        })
+    </script>
   </body>
 </html>
