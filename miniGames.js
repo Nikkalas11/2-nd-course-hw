@@ -66,38 +66,38 @@ function simpleArithmatic() {
       alert(`Вы ошиблись. Правильный ответ ${num}`);
     } else {
       alert(`Вы молодец. Правильный ответ ${num}`);
-      trueAttempt++; 
+      trueAttempt++;
     }
-    attempt ++;
+    attempt++;
     console.log(num);
     console.log(userNumber);
   }
 }
 
-function turnTheTextOver(){
+function turnTheTextOver() {
   const turnText = prompt(`Введите текст, который требуется повернуть`);
   let turnTextOver = [];
-  turnTextOver = turnText.split('').reverse().join('');
-  alert (turnTextOver);
+  turnTextOver = turnText.split("").reverse().join("");
+  alert(turnTextOver);
 }
 
 function simpleQuiz() {
   const quiz = [
     {
-        question: "Какой цвет небо?",
-        options: ["1. Красный", "2. Синий", "3. Зеленый"],
-        correctAnswer: 2 // номер правильного ответа
+      question: "Какой цвет небо?",
+      options: ["1. Красный", "2. Синий", "3. Зеленый"],
+      correctAnswer: 2, // номер правильного ответа
     },
     {
-        question: "Сколько дней в неделе?",
-        options: ["1. Шесть", "2. Семь", "3. Восемь"],
-        correctAnswer: 2
+      question: "Сколько дней в неделе?",
+      options: ["1. Шесть", "2. Семь", "3. Восемь"],
+      correctAnswer: 2,
     },
     {
-        question: "Сколько у человека пальцев на одной руке?",
-        options: ["1. Четыре", "2. Пять", "3. Шесть"],
-        correctAnswer: 2
-    }
+      question: "Сколько у человека пальцев на одной руке?",
+      options: ["1. Четыре", "2. Пять", "3. Шесть"],
+      correctAnswer: 2,
+    },
   ];
   let correctUserAnwser = 0;
 
@@ -113,6 +113,34 @@ function simpleQuiz() {
       correctUserAnwser++;
     }
   }
-  alert(`Вы дали ${correctUserAnwser} правильных ответов`)
+  alert(`Вы дали ${correctUserAnwser} правильных ответов`);
+}
 
+function rockPaperScissors() {
+  const combinations = ["камень", "ножницы", "бумага"];
+  while (true) {
+  const userChoice = prompt(`Камень? Ножницы? Бумага?`);
+  const randomChoice =
+    combinations[Math.floor(Math.random() * combinations.length)];
+
+  let result;
+  if (userChoice == null) {
+    alert(`До свидания`);
+    break
+  } else if (userChoice.toLowerCase() === randomChoice) {
+    result = "Ничья";
+  } else if (
+    (userChoice.toLowerCase() === "камень" && randomChoice === "ножницы") ||
+    (userChoice.toLowerCase() === "ножницы" && randomChoice === "бумага") ||
+    (userChoice.toLowerCase() === "бумага" && randomChoice === "камень")
+  ) {
+    result = "Вы выиграли";
+  } else {
+    result = "Вы проиграли";
+  }
+  alert(`Ваш выбор ${userChoice}
+         Выбор компьютера ${randomChoice}
+                            ${result}`);
+  
+  }
 }
