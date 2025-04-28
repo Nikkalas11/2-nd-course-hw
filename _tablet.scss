@@ -1,0 +1,145 @@
+@media (max-width: 1024px) {
+.center {
+    padding-left: calc(50% - 420px);
+    padding-right: calc(50% - 420px);;
+}
+.star4, .star5, .star11, .star12 {
+    display: none;
+}
+.top {
+    height: 515px;
+}
+.top-page {
+    &__title {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    &__description {
+        font-size: 20px;
+    }
+}
+.ani-strip {
+    height: 55px;
+    &__text {
+        font-size: 20px;
+        &::after {
+            content: url(./Img/Star-mobile.svg);  
+        }
+    }
+}
+.about:hover {
+    transform: none;
+}
+.about-games {
+    padding-top: 48px;
+    background-image: none;
+    height: 100%;
+    &__main {
+        font-size: 40px;
+    }
+    &__description {
+        font-size: 20px;
+    }
+    &__block {
+        display: grid;
+        column-gap: 134px;
+        row-gap: 62px;
+        grid-template-areas: 
+        'item-1 item-3'
+        'item-2 item-5'
+        'item-4 item-6';
+    }
+    &__card {
+        max-width: 352px;
+        height: 100%;
+        &_marg {
+            margin-top: 0px;
+        }
+    }
+    &__img {
+        max-width: 352px;
+    }
+    &__text {
+        padding: 32px;
+    }
+    &__number {
+        display: none;
+    }
+    &__title {
+        text-align: center;
+    }
+   
+}
+.item1 {grid-area: item-1;}
+.item2 {grid-area: item-2;}
+.item3 {grid-area: item-3;}
+.item4 {grid-area: item-4;}
+.item5 {grid-area: item-5;}
+.item6 {grid-area: item-6;}
+
+.mini-star1, .mini-star2 {
+    transform: scale(0.7);
+}
+.mini-star1 {
+    top: 20px;
+}
+.mini-star2 {
+    bottom: 27px;
+}
+.mini-games {
+    &__block {
+        gap: 46px;
+    }
+    &__card {
+        align-items: center;
+        max-height: 420px;
+        width: 100%;
+    }
+    &__title {
+       font-size: 40px;
+       padding-bottom: 46px; 
+    }
+    &__text {
+        padding: 24px;
+    }
+    &__name {
+        font-size: 32px;
+        line-height: 32px;
+        padding-right: 0px;
+        text-align: center;
+    }
+    &__discription {
+        font-size: 20px;
+        padding-right: 0px;
+        padding-bottom: 24px;
+        line-height: 24px;
+        text-align: center;
+    }
+    &__btn {
+        margin: 0 auto;
+    }
+    
+    &__pic {
+        max-width: 420px;
+        height: 354px;
+    }
+
+}
+}
+
+@media (max-width: 768px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .about-games {
+        &__block {
+            column-gap: 32px;
+            row-gap: 16px;
+        }
+    }
+    .mini-games__pic {
+        max-width: 368px;
+        height: 100%;
+    }
+}

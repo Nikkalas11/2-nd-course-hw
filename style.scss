@@ -3,12 +3,13 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Montserrat", serif;
+  
 }
-
 .center {
   padding-left: calc(50% - 600px);
   padding-right: calc(50% - 600px);
@@ -53,6 +54,7 @@ body {
 .top-page {
   max-width: 768px;
   padding-top: 196px;
+  
   &__title {
     @extend %shared-titles;
     color: rgb(32, 32, 39);
@@ -81,24 +83,28 @@ body {
     line-height: 141.69%;
     text-align: center;
     text-decoration: none;
+    
+
     &:hover {
       background-color: rgb(255, 255, 255);
       color: rgb(32, 32, 39);
     }
   }
 }
+.scrol-bar {
+  background-color: rgb(188, 236, 48);
+  max-width: max-content;
+  overflow-x: hidden;
+  
+}
 .ani-strip {
   // margin-top: 156px;
-  background-color: rgb(188, 236, 48);
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
-  //width: 3220px;
-  height: 90px;
-  overflow-x: hidden;
   text-wrap: nowrap;
-
-  //animation: strip-move 5s linear infinite;
+  animation: strip-move 10s linear infinite;
+  height: 90px;
 
   &__text {
     color: rgb(32, 32, 39);
@@ -106,7 +112,7 @@ body {
     font-weight: 700;
     line-height: 110%;
     letter-spacing: 4%;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
     padding-right: 51px;
     &::after {
@@ -116,10 +122,10 @@ body {
   }
 }
 
-// @keyframes strip-move {
-//   from { transform: translateX(0%); }
-//     to { transform: translateX(-100%); }
-//}
+@keyframes strip-move {
+  from { transform: translateX(0%); }
+    to { transform: translateX(-100%); }
+}
 
 .about:hover {
   transform: scale(1.1);
@@ -302,5 +308,5 @@ body {
     text-align: center;
   }
 }
-
+@import "tablet";
 @import "mobile";
