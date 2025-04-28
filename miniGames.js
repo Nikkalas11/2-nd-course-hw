@@ -144,3 +144,21 @@ function rockPaperScissors() {
   
   }
 }
+
+function randomColor() {
+ 
+    
+    const miniGamesEl = document.querySelector('.mini-games');
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    miniGamesEl.style.backgroundColor = `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`;
+
+    let userColor = confirm(`Нажмите, чтобы поменять цвет`);
+    if (userColor === false) {
+      miniGamesEl.style.backgroundColor = `#202027`;
+    } 
+    
+  
+  
+}
