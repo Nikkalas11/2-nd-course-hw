@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="hidingText">Задание 1. Скрытие и показ текста</h1>
+    <button class="hidingBtn">Hide</button>
+    
+    <script>
+      const hidingTextEl = document.querySelector('.hidingText');
+      const hidingBtnEl = document.querySelector('.hidingBtn');
+      hidingBtnEl.addEventListener('click', function () {
+        if (hidingTextEl.style.display === 'none') {
+          hidingTextEl.style.display = 'block';
+          hidingBtnEl.textContent = 'Hide';
+        } else {
+          hidingTextEl.style.display = 'none';
+          hidingBtnEl.textContent = 'Show';
+        }
+      });
+     
+    </script>
+
+    
+    <p class="colorText">Задание 2. Изменение стиля элемента
+        Задача: создайте кнопку, которая изменяет цвет текста в элементе 
+    </p>
+    <button class="colorBtn">blue</button>
+    
+    <script>
+      const colorTextEl = document.querySelector('.colorText');
+      const colorBtnEl = document.querySelector('.colorBtn');
+      colorBtnEl.addEventListener('click', function () {
+        if (colorTextEl.style.color === 'blue') {
+          colorTextEl.style.color = 'black';
+          colorBtnEl.textContent = 'blue';
+        } else {
+          colorTextEl.style.color = 'blue';
+          colorBtnEl.textContent = 'black';
+        }
+      });
+     
+    </script>
+    
+    <h1 class="dinamicText">Задание 3. Динамическое изменение текста
+    </h1>
+    <button class="dinamicBtn">Change</button>
+    
+    <script>
+      const dinamicTextEl = document.querySelector('.dinamicText');
+      const dinamicBtnEl = document.querySelector('.dinamicBtn');
+      dinamicBtnEl.addEventListener('click', function () {
+        dinamicTextEl.textContent = 'Привет, мир!'
+      });
+     
+    </script>
+  
+    <p class="description">Задание 4. Поиск и изменение элементов по классу</p>
+    <p class="description">Задание 4. Поиск и изменение элементов по классу</p>
+    <p class="description">Задание 4. Поиск и изменение элементов по классу</p>
+    <p class="description">Задание 4. Поиск и изменение элементов по классу</p>
+    <button class="changeTexts">Change texts</button>
+
+    <script>
+        const descriptionEl = document.querySelectorAll('.description');
+        const changeTextsEl = document.querySelector('.changeTexts');
+        changeTextsEl.addEventListener('click', function (){
+            descriptionEl.forEach(el => {
+            el.textContent = 'Измененный текст';
+        })
+        })
+        
+    </script>
+    
+    <p class="description5">Задание 5. Работа с querySelectorAll</p>
+    <p class="descript">Задание 5. Работа с querySelectorAll</p>
+    <p class="descript">Задание 5. Работа с querySelectorAll</p>
+    <p class="description5">Задание 5. Работа с querySelectorAll</p>
+    <p class="descript">Задание 5. Работа с querySelectorAll</p>
+    <p class="description5">Задание 5. Работа с querySelectorAll</p>
+    <button class="changeText">Change texts description class</button>
+
+    <script>
+        const description5El = document.querySelectorAll('.description5');
+        const changeTextEl = document.querySelector('.changeText');
+        changeTextEl.addEventListener('click', function (){
+            description5El.forEach(el => {
+            el.textContent = 'Новый текст';
+        })
+        })
+        
+    </script>
+    <h3>Задание 6. Добавление нового элемента в DOM
+        Задача: создайте кнопку, которая добавляет новый элемент с текстом в конец документа</h3>
+    <button class="appendBtn">Добавить элемент</button> 
+    <script>
+        const newParagraph = document.createElement('p');
+        newParagraph.textContent = 'Новый абзац';
+        const appendBtnEl = document.querySelector('.appendBtn');
+        appendBtnEl.addEventListener('click', function(){
+            document.body.appendChild(newParagraph);
+        })
+        
+    </script>   
+
+    <h3>Задание 7. Удаление элемента</h3>
+    <p class="description7">создайте кнопку, которая удаляет первый элемент </p>
+    <p class="description7">создайте кнопку, которая удаляет первый элемент </p>
+    <p class="description7">создайте кнопку, которая удаляет первый элемент </p>
+    <p class="description7">создайте кнопку, которая удаляет первый элемент </p>
+    <p class="description7">создайте кнопку, которая удаляет первый элемент </p>
+    <p class="description7">создайте кнопку, которая удаляет первый элемент </p>
+    <button class="removeBtn">Удалить элемент</button>
+    <script>
+        const description7El = document.querySelector('.description7');
+        const removeBtnEl = document.querySelector('.removeBtn');
+        removeBtnEl.addEventListener('click', function(){
+            description7El.remove();
+        })
+    </script>
+  </body>
+</html>
