@@ -1,8 +1,7 @@
-@media (max-width: 425px) {
-  
+@media (max-width: 767px) {
   .center {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: calc(50% - 171px);
+    padding-right: calc(50% - 171px);
   }
   .star2 {
     width: 35px;
@@ -107,7 +106,6 @@
     &__text {
       padding: 29px;
       padding-bottom: 32px;
-      
     }
     &__name {
       font-size: 32px;
@@ -135,9 +133,7 @@
         color: white;
       }
     }
-    &__img {
-      
-    }
+    
     &__pic {
       width: 100%;
       max-height: 100%;
@@ -151,5 +147,3 @@
     }
   }
 }
-
-

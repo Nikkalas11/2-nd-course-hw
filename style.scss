@@ -8,7 +8,6 @@
 
 body {
   font-family: "Montserrat", serif;
-  
 }
 .center {
   padding-left: calc(50% - 600px);
@@ -54,7 +53,7 @@ body {
 .top-page {
   max-width: 768px;
   padding-top: 196px;
-  
+
   &__title {
     @extend %shared-titles;
     color: rgb(32, 32, 39);
@@ -83,7 +82,6 @@ body {
     line-height: 141.69%;
     text-align: center;
     text-decoration: none;
-    
 
     &:hover {
       background-color: rgb(255, 255, 255);
@@ -95,7 +93,6 @@ body {
   background-color: rgb(188, 236, 48);
   max-width: max-content;
   overflow-x: hidden;
-  
 }
 .ani-strip {
   // margin-top: 156px;
@@ -123,8 +120,12 @@ body {
 }
 
 @keyframes strip-move {
-  from { transform: translateX(0%); }
-    to { transform: translateX(-100%); }
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 .about:hover {
